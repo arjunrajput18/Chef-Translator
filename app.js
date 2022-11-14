@@ -2,7 +2,7 @@
 var txtInput = document.querySelector("#txt-input");
 var btnTranslate = document.querySelector("#btn-translator");
 var outputDiv = document.querySelector("#txt-output");
-//console.log(txtInput)
+
 var serverURL="https://api.funtranslations.com/translate/chef.json";
 
 function getTranslationURL(input){
