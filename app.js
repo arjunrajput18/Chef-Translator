@@ -5,20 +5,19 @@ var outputDiv = document.querySelector("#txt-output");
 
 var serverURL="https://api.funtranslations.com/translate/chef.json";
 
-function getTranslationURL(input){
+function constructedURL(input){
 return (serverURL+"?"+"text="+input)
 }
 
 function errorHandler(error){
-console.log("error occured "+error);
-alert("something went wrong, try after sometime")
+alert("Try After some time")
 }
 
 function clickHandler(){
   
     var inputText=txtInput.value; 
 
-    fetch(getTranslationURL(inputText)) 
+    fetch(constructedURL(inputText)) 
     .then(response=>response.json())
     .then(json=>{
         outputDiv.innerHTML=json.contents.translated
